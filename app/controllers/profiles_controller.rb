@@ -1,5 +1,9 @@
 class ProfilesController < ApplicationController
 
+    def profile_dashboard
+        @profile = Profile.find(params[:id]) 
+    end
+    
     def show
         @profile = Profile.find(params[:id])
     end
@@ -12,6 +16,8 @@ class ProfilesController < ApplicationController
         @profile = Profile.new(profile_params)
 
          if @profile.save
+            ProfileNotificationMailer.create_notification(@profile).deliver_now
+
             redirect_to new_profile_address_path(@profile)
             #render json: { profile: @profile }, status: :created
         else

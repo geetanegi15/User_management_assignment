@@ -10,7 +10,7 @@ class AddressesController < ApplicationController
         @address = @profile.addresses.new(address_params)
 
         if @address.save!
-            redirect_to profile_path(@profile)
+            redirect_to  profile_dashboard_path(@profile)
         else
             render json: @address.errors.full_messages
         end

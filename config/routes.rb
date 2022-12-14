@@ -15,4 +15,6 @@ Rails.application.routes.draw do
       end
 
       resources :educations
+
+    get 'profiles/:id/profile_dashboard', to: "profiles#profile_dashboard" , as: 'profile_dashboard'
 end

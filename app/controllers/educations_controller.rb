@@ -5,10 +5,11 @@ class EducationsController < ApplicationController
     end
 
     def create
+        @profile = Profile.find(params[:id])
         @education = Education.new(education_params)
             
         if @education.save
-            redirect_to education_path(@education)
+            redirect_to profile_dashboard_path(@profile)
         else
             render json: @profile.errors, status: :unprocessable_entity
         end
