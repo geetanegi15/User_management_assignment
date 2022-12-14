@@ -1,0 +1,39 @@
+<table>
+    <tr> <td> INSTITUTE NAME </td>
+        <td> <%= @education.institute_name %> </td> 
+    </tr> 
+    <tr>
+        <td> UNIVERSITY</td> 
+        <td> <%= @education.university%></td> 
+    </tr> 
+    <tr>
+        <td>COURSE </td> <td> 
+        <%= @education.course%></td> 
+    </tr> 
+    <tr>
+        <td>STREAM </td> 
+        <td> <%= @education.stream %> </td> 
+    </tr> 
+    <tr>
+         <td>MARKS </td> 
+         <td> <%= @education.marks %> </td> 
+    </tr>
+    <tr>
+        <td>PASSED YEAR</td> 
+        <td> <%= @education.passed_year %> </td>
+    <tr>
+    <tr>
+        <td>PARSENTAGE</td> 
+        <td> <%= @education.parsentage%> </td>
+    <tr>
+    <tr>
+        <td> 
+            <%= link_to "Delete", education_path(@education),data: {
+            :method => :delete } %>
+        </td>
+         <td>
+            <%= link_to "update", edit_education_path(@education) %>
+        </td>
+        
+</tr>
+</table>

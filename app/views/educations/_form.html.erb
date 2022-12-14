@@ -1,0 +1,41 @@
+<%= form_with model: @education do |form| %>
+    <div>
+    <%= form.label :Institute_Name %>
+    <%= form.text_field :institute_name %>
+    </div>
+
+    <div>
+    <%= form.label :University%>
+    <%= form.text_field :university %>
+    </div>
+
+    <div>
+    <%= form.label :Course %>
+    <%= form.text_field :course %>
+    </div>
+
+    <div>
+    <%= form.label :Stream %>
+    <%= form.text_field :stream %>
+    </div>
+
+    <div>
+    <%= form.label :Marks%>
+    <%= form.text_field :marks %>
+    </div>
+
+    <div>
+    <%= form.label :Passed_Year %>
+    <%= form.text_field :passed_year %>
+    </div>    
+
+
+    <div>
+    <%= form.label :Parsentage %>
+    <%= form.text_field :parsentage %>
+    </div> 
+
+    <div> 
+    <%= form.submit " Add Education " %>
+    </div>   
+<% end %>

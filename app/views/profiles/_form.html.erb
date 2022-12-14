@@ -1,0 +1,35 @@
+<%= form_with model: @profile do |form| %>
+    <div>
+    <%= form.label :First_name %>
+    <%= form.text_field :first_name %>
+    </div>
+
+    <div>
+    <%= form.label :Last_name%>
+    <%= form.text_field :last_name %>
+    </div>
+
+    <div>
+    <%= form.label :Mobile_no %>
+    <%= form.text_field :mobile_no %>
+    </div>
+
+    <div>
+    <%= form.label :DOB %>
+    <%= form.text_field :DOB %>
+    </div>
+
+    <div>
+    <%= form.label :Email%>
+    <%= form.text_field :email %>
+    </div>
+
+    <div>
+    <%= form.label :Activated %>
+    <%= form.text_field :activated %>
+    </div>    
+
+    <div> 
+    <%= form.submit " create profile " %>
+    </div>   
+<% end %>

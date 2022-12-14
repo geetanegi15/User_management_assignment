@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  institute_name: MyString
+  university: MyString
+  course: MyString
+  stream: MyString
+  marks: 
+  passed_year: MyString
+  parsentage: MyString
+
+two:
+  institute_name: MyString
+  university: MyString
+  course: MyString
+  stream: MyString
+  marks: 
+  passed_year: MyString
+  parsentage: MyString
