@@ -1,4 +1,4 @@
-<%= form_with model: @education do |form| %>
+<%= form_with model: [ @profile, @profile.educations.build ] do |form| %>
     <div>
     <%= form.label :Institute_Name %>
     <%= form.text_field :institute_name %>

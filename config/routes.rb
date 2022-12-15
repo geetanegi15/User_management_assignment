@@ -12,9 +12,10 @@ Rails.application.routes.draw do
 
       resources :profiles do
         resources :addresses
+        resources :educations
       end
 
-      resources :educations
+      
 
     get 'profiles/:id/profile_dashboard', to: "profiles#profile_dashboard" , as: 'profile_dashboard'
 end
