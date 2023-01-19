@@ -1,0 +1,40 @@
+<h1>ALL PROFILES </h1>
+<table>
+  <%= search_form_for @q , url: :profiles do |f| %>
+    <tr>
+     <td> <%= f.label :SEARCH_BY_FIRST_NAME_cont %> </td>
+     <td> <%= f.text_field :first_name_cont %> </td>
+    </tr> 
+    <tr>
+     <td> <%= f.label :SEARCH_BY_COURSE %> </td>
+     <td> <%= f.text_field :activated_cont %> </td>
+     <td> <%= f.submit %> </td>
+    </tr> 
+  <% end %>
+  </table>
+<table>
+<thead>
+  <tr>
+    <th> FIRST NAME </th>
+    <th> LAST NAME</th>
+    <th> MOBILE NUMBER</th>
+    <th>EMAIL </th>
+    <th> DOB</th>
+    <th> ACTIVATED</th>
+  </tr>
+</thead
+  <% @profile.each do |p| %>
+    <tr>
+     <td> <%= p.first_name %> </td>
+     <td> <%= p.last_name %> </td>
+     <td> <%= p.mobile_no %> </td>
+     <td> <%= p.email %> </td>
+     <td> <%= p.DOB %> </td>
+     <td> <%= p.activated %> </td>
+     <td> 
+                <%= link_to "Delete", profile_path(p),data: {
+                 :method => :delete } %>
+    </td>
+    </tr>
+  <% end %>
+</table>

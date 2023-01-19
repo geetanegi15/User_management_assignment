@@ -1,9 +1,13 @@
 class ProfilesController < ApplicationController
 
+   # before_action :set_profile
     def profile_dashboard
         @profile = Profile.find(params[:id]) 
     end
-    
+    def index
+        @q = Profile.ransack(params[:q])
+        @profile = @q.result(distinct: true).page(params[:page])
+    end
     def show
         @profile = Profile.find(params[:id])
     end
@@ -42,7 +46,7 @@ class ProfilesController < ApplicationController
     def destroy
         @profile = Profile.find(params[:id])
         @profile.destroy
-        redirect_to root_path
+        redirect_to profiles_path
     end
 
     private
